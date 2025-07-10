@@ -1,56 +1,142 @@
 # Set default behavior to automatically normalize line endings
 * text=auto eol=lf
 
-# JS and TS files
-*.js text eol=lf
-*.ts text eol=lf
-*.jsx text eol=lf
-*.tsx text eol=lf
-*.json text eol=lf
+# Go source files
+*.go text eol=lf diff=golang
+go.mod text eol=lf
+go.sum text eol=lf
 
-# Config files
+# Go templates
+*.gotmpl text eol=lf
+*.tmpl text eol=lf
+
+# Configuration files
 *.yml text eol=lf
 *.yaml text eol=lf
 *.toml text eol=lf
 *.ini text eol=lf
 *.conf text eol=lf
+*.json text eol=lf
 
 # Documentation
 *.md text eol=lf
 *.txt text eol=lf
+*.rst text eol=lf
+README text eol=lf
+LICENSE text eol=lf
+COPYING text eol=lf
+CHANGELOG text eol=lf
 
-# Serialisation
+# Data files
 *.csv text eol=lf
+*.xml text eol=lf
+*.sql text eol=lf
 
-# Shell scripts should use LF
+# Shell scripts
 *.sh text eol=lf
 *.bash text eol=lf
 
-# Web assets
-*.css text eol=lf
-*.scss text eol=lf
-*.html text eol=lf
-
-# Docker
+# Docker files
 Dockerfile text eol=lf
-docker-compose.yml text eol=lf
+docker-compose*.yml text eol=lf
+.dockerignore text eol=lf
 
-# Graphics - treat as binary
+# Environment files
+*.env text eol=lf
+.env* text eol=lf
+
+# Makefile
+Makefile text eol=lf
+makefile text eol=lf
+*.mk text eol=lf
+
+# Git files
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.gitmodules text eol=lf
+
+# Certificate files - treat as binary
+*.pem binary
+*.crt binary
+*.cer binary
+*.der binary
+*.key binary
+*.p12 binary
+*.pfx binary
+*.jks binary
+
+# Archive files - treat as binary
+*.zip binary
+*.tar binary
+*.tar.gz binary
+*.tgz binary
+*.tar.bz2 binary
+*.rar binary
+*.7z binary
+
+# Image files - treat as binary
 *.png binary
 *.jpg binary
 *.jpeg binary
 *.gif binary
 *.ico binary
-*.svg text
+*.bmp binary
+*.tiff binary
+*.svg text eol=lf
+
+# Font files - treat as binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+
+# Audio/Video files - treat as binary
+*.mp3 binary
+*.mp4 binary
+*.avi binary
+*.mov binary
+*.wav binary
+*.flac binary
+
+# Document files - treat as binary
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+
+# Database files - treat as binary
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+
+# Compiled Go binaries - treat as binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
 
 # Exclude files from exporting
 .gitattributes export-ignore
 .gitignore export-ignore
-.eslintrc.js export-ignore
-.prettierrc export-ignore
-README.md export-ignore
-jest.config.js export-ignore
+.editorconfig export-ignore
+.dockerignore export-ignore
+node_modules/ export-ignore
+*.log export-ignore
+*.tmp export-ignore
+.env* export-ignore
 
-# Linguist language overrides
-*.js linguist-language=JavaScript
-*.ts linguist-language=TypeScript
+# Linguist language detection
+*.go linguist-language=Go
+*.mod linguist-language=Go
+*.sum linguist-generated=true
+vendor/* linguist-vendored
+*.pb.go linguist-generated=true
+*_generated.go linguist-generated=true
+*_gen.go linguist-generated=true
+
+# Diff settings for Go files
+*.go diff=golang

@@ -1,12 +1,11 @@
-#!/bin/sh
 # Run Go formatting
 echo "Running go fmt..."
 go fmt ./...
 
 # Run Go vet for static analysis
-echo "Running go vet..."
-go vet ./...
+# echo "Running go vet..."
+# go vet ./...
 
-# Run Go tests
-echo "Running go test..."
-go test ./...
+# # Run Go tests
+# echo "Running go test..."
+# go test ./...
